@@ -102,3 +102,5 @@ dist
 
 # TernJS port file
 .tern-port
+# Stop info from Macs DS_Store from entering the code
+.DS_Store
