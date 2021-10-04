@@ -3,4 +3,4 @@ Group Members
 Mary Lou Hoover- Readme
 Kalvin Nguyen
 Todd Taylor- get APIs working
-Sam Kilpatrick
+Sam Kilpatrick- CSS side 
