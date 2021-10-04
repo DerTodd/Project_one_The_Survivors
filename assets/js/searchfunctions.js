@@ -8,8 +8,8 @@ $(document).ready(function() {
         runSearch(searchEvent);
     });
 
-    // stat search should be the function for the stats lookup. 
+    // stat search should be the function for the
     const runSearch = (searchEvent) => {
-        statSearch(searchEvent);
+        recipeSearch(searchEvent);
     };
 });
