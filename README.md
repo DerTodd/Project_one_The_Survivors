@@ -1,6 +1,6 @@
 # Project_one_The_Survivors
 Group Members
-Mary Lou Hoover
+Mary Lou Hoover- Readme
 Kalvin Nguyen
-Todd Taylor
+Todd Taylor- get APIs working
 Sam Kilpatrick
