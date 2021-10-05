@@ -24,7 +24,7 @@ function getItem() {
 };
 
 var recipe
-var recipeContainer = $("#search-results-container1");
+var recipeContainer = $("#search-results-container");
 getItem();
 
 function getData() {
@@ -55,4 +55,29 @@ function getData() {
         }
     })
 }
+
+$("#searchRecipe").click(function() {
+    recipe= $("#recipe").val();
+    getData();
+    var checkArray = searchHistory.includes(recipe);
+    if (checkArray == true) {
+        return
+    }
+    else {
+        searchHistory.push(recipe);
+        localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+        var getrecipeBtn = $("<a>").attr({
+            
+            class: "collection-item",
+            href: "#"
+        });
+        getrecipeBtn.text(recipe);
+        $(".list-group").append(getrecipeBtn);
+    };
+});
+// listens for action on the history buttons
+$("collection-item").click(function() {
+    recipe = $(this).text();
+    getData();
+});
 
