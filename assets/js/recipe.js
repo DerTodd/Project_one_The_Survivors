@@ -1,48 +1,58 @@
 let search; 
 let recipesArray = [];
-const recipeContainer = $("#search-results-container1");
 const recipeEl = $("#recipe");
+var searchHistory = [];
 
-const recipeSearch = (searchBar) => {
+// get history function instead of const. b/c it wont be called again 
+function getItem() {
+    var storedRecipe = JSON.parse(localStorage.getItem("search-history"));
+    if (storedRecipe !== null) {
+        storedRecipe = searchHistory;
+    };
+// creatign a for loop so that there is a max of 6 meals recipes. 
+    for (i = 0; i < searchHistory.length; i++) {
+        if (i == 6) {
+        break;
+    }
+    getrecipeBtn = $("<a>").attr({
+        class: "collection-item",
+        href: "#"
+    });
+    getrecipeBtn.text(searchHistory[i]);
+    (".list-group").append(getrecipeBtn)
+    }
+};
 
-fetch("https://edamam-recipe-search.p.rapidapi.com/search?q="+searchBar, {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "edamam-recipe-search.p.rapidapi.com",
-		"x-rapidapi-key": "669d5b1b04msh355ab578e9da7d2p10cf56jsn3370f7327c12"
-	}
-})
+var recipe
+var recipeContainer = $("#search-results-container1");
+getItem();
 
-.then(function(response) {
-	let searchResults = $("#search-results");
-    recipesArray = response.recipes;
-    console.log(response);
+function getData() {
+    var queryURL = "https://edamam-recipe-search.p.rapidapi.com/search?q=" + recipe + "&appid=669d5b1b04msh355ab578e9da7d2p10cf56jsn3370f7327c12"
+    // clear themain container
+    recipeContainer.empty();
+    $("#cocktailRecipe").empty();
+
+    // jquery pull 
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
+
+    .then(function(response) {
+        recipesArray = response.recipes;
+        console.log(response);
 
     // css within java for display of recipes
-    searchResults.empty();
-    recipeContainer.css('display', 'block');
-    recipeEl.css('display','none')
+        searchResults.empty();
+        recipeContainer.css('display', 'block');
+        recipeEl.css('display','none')
 
     // create an error notification in case there are no results
-    if (recipesArray === null) {
-        const noResults = $("<p>").text('No results could be found.');
-        $("#search-results").append(noResults);
-    }
-
-    // search history function 
-    let searchHistory = [];
-
-    function saveHistory () {
-        var recipeSearched = JSON.parse(localStorage.getItem("searchHistory"));
-        if (recipeSearched !== null) {
-            searchHistory = recipeSearched;
-        } else {
-        // else staement 
-        // for loop so there is max of recipes in history
-        for (i = 0; i < 4; i++) {
-        searchHistory();
+        if (recipesArray === null) {
+            const noResults = $("<p>").text('No results could be found.');
+            $("#search-results").append(noResults);
         }
-    }
+    })
 }
-})
-}
+
