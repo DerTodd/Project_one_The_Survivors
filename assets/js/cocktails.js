@@ -30,7 +30,7 @@ function getCocktail() {
     .then(function (data) {
         console.log(data)
         console.log("drink check " + data.drinks[0].strDrink)
-        drinkChoice = {
+        var drinkChoice = {
             name : data.drinks[0].strDrink,
             instructions : data.drinks[0].strInstructions,
             ingredient1 : data.drinks[0].strIngredient1,
@@ -47,42 +47,115 @@ function getCocktail() {
             measurement6 : data.drinks[0].strMeasure6,
             instructions : data.drinks[0].strInstructions
         };
-        ingredList =[
+        // var identList = [
+        //     ingredient1,
+        //     ingredient2,
+        //     ingredient3,
+        //     ingredient4,
+        //     ingredient5,
+        //     ingredient6,
+        //     ingredient7,
+        //     ingredient8,
+        //     ingredient9,
+        //     ingredient10,
+        //     ingredient11,
+        //     ingredient12,
+        //     ingredient13,
+        //     ingredient14,
+        //     ingredient15
+
+        // ]
+
+        // var measList = [
+        //     measurements1,
+        //     measurements2,
+        //     measurements3,
+        //     measurements4,
+        //     measurements5,
+        //     measurements6,
+        //     measurements7,
+        //     measurements8,
+        //     measurements9,
+        //     measurements10,
+        //     measurements11,
+        //     measurements12,
+        //     measurements13,
+        //     measurements14,
+        //     measurements15
+        // ]
+        var ingredList =[
             data.drinks[0].strIngredient1,
             data.drinks[0].strIngredient2,
             data.drinks[0].strIngredient3,
             data.drinks[0].strIngredient4,
             data.drinks[0].strIngredient5,
             data.drinks[0].strIngredient6,
+            data.drinks[0].strIngredient7,
+            data.drinks[0].strIngredient8,
+            data.drinks[0].strIngredient9,
+            data.drinks[0].strIngredient10,
+            data.drinks[0].strIngredient11,
+            data.drinks[0].strIngredient12,
+            data.drinks[0].strIngredient13,
+            data.drinks[0].strIngredient14,
+            data.drinks[0].strIngredient15
+            
         ];
-        measurements = [
+        var measurements = [
             data.drinks[0].strMeasure1,
             data.drinks[0].strMeasure2,
             data.drinks[0].strMeasure3,
             data.drinks[0].strMeasure4,
             data.drinks[0].strMeasure5,
-            data.drinks[0].strMeasure6
+            data.drinks[0].strMeasure6,
+            data.drinks[0].strMeasure7,
+            data.drinks[0].strMeasure8,
+            data.drinks[0].strMeasure9,
+            data.drinks[0].strMeasure10,
+            data.drinks[0].strMeasure11,
+            data.drinks[0].strMeasure12,
+            data.drinks[0].strMeasure13,
+            data.drinks[0].strMeasure14,
+            data.drinks[0].strMeasure15
         ] 
         //
 
-        
+        console.log(ingredList);
+        console.log(measurements);
         console.log(drinkChoice);
-        console.log(ingredList[0].data.value);
         console.log(drinkChoice.ingredient2);
         console.log(drinkChoice.ingredient3);
         console.log(drinkChoice.ingredient4);
         document.getElementById("drinkName").textContent = drinkChoice.name;
         document.getElementById("instructions").textContent = "Instructions: " + drinkChoice.instructions;
-        document.getElementById("ingredient1").textContent = "First Ingredient: " + drinkChoice.measurement1 + " " + drinkChoice.ingredient1;
-        document.getElementById("ingredient2").textContent = "Second Ingredient: " + drinkChoice.measurement2 + " " + drinkChoice.ingredient2;
-        document.getElementById("ingredient3").textContent = "Third Ingredient: " + drinkChoice.measurement3 + " " + drinkChoice.ingredient3;
-        document.getElementById("ingredient4").textContent = "Forth Ingredient: " + drinkChoice.measurement4 + " " + drinkChoice.ingredient4;
-        document.getElementById("ingredient5").textContent = "Fifth Ingredient: " + drinkChoice.measurement5 + " " + drinkChoice.ingredient5;
-        document.getElementById("ingredient6").textContent = "Sixth Ingredient: " + drinkChoice.measurement6 + " " + drinkChoice.ingredient6;
+        //document.getElementById("ingredient1").textContent = "First Ingredient: " + drinkChoice.measurement1 + " " + drinkChoice.ingredient1;
+        // document.getElementById("ingredient2").textContent = "Second Ingredient: " + drinkChoice.measurement2 + " " + drinkChoice.ingredient2;
+        // document.getElementById("ingredient3").textContent = "Third Ingredient: " + drinkChoice.measurement3 + " " + drinkChoice.ingredient3;
+        // document.getElementById("ingredient4").textContent = "Forth Ingredient: " + drinkChoice.measurement4 + " " + drinkChoice.ingredient4;
+        // document.getElementById("ingredient5").textContent = "Fifth Ingredient: " + drinkChoice.measurement5 + " " + drinkChoice.ingredient5;
+        // document.getElementById("ingredient6").textContent = "Sixth Ingredient: " + drinkChoice.measurement6 + " " + drinkChoice.ingredient6;
         for (let index = 0; index < 15; index++) {
-            const element = array[index];
-            
-        }
+            const ingred = ingredList[index];
+            //const ident = identList[index];
+            if(ingred !== null){
+            //var iList =
+            //document.getElementById("ingredUL").appendChild(ident).textContent = "Ingredient: " + ingred + " "
+            var iList = document.createElement('li');
+            iList.textContent = ingred;
+          document.getElementById('ingredUL').appendChild(iList); 
+            };
+        };
+
+        for (let index = 0; index < 15; index++) {
+            const measu = measurements[index];
+            //const identm = measList[index];
+            if(measu !== null){
+            //document.getElementById("ingredUL").appendChild(identm).textContent = "Measurment: " + measu + " ";
+            var mlist = document.createElement('li');
+            mlist.textContent = measu;
+            document.getElementById('measUL').appendChild(mlist)
+            };
+        };
     });
 };
 
@@ -93,8 +166,18 @@ function getCocktail() {
 //set the event listener to the button with the id "findIt"
 findIt.addEventListener('click', function(event) {
     //alert("Hi, " + event.target.tagName);
+    clearDiv("ingredUL");
+    clearDiv("measUL");
     getCocktail();
 });
+//inspired by https://www.geeksforgeeks.org/how-to-clear-the-content-of-a-div-using-javascript/
+function clearDiv(elementID) {
+    var ul = document.getElementById(elementID);
+      
+    while(ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
+}
 
 //init();
 //https://api.punkapi.com/v2/beers?food_tacos
