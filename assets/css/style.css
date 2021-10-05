@@ -2,7 +2,27 @@
   background-color: grey;
 } */
 
-
+/* Header */
+/* header {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #525559;
+  font-family: 'Montserrat', sans-serif; */
+}
+/* Body */
+/* body {
+  background: #525559;
+  background: linear-gradient(350deg, #525559, #8fb2bf, #f2f2f2);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Lora', serif;
+  margin: 0px;
+  padding: 0;
+} */
 /* Banner Image */
 
 /* Button Links */
