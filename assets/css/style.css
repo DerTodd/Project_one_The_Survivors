@@ -20,6 +20,18 @@
 }
 
 
+.bannerImage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+  height: 500vh;
+}
+
+/* Sizing of Banner Image */
+
+
+/* Button Links */
 
 /* Form */
 /* *,
