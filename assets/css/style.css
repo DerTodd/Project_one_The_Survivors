@@ -1,25 +1,40 @@
 /* h1 */
-font-family: 'Montserrat', sans-serif;
+.h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
 
 /* Banner Image */
 .bannerImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
 
 }
 /* Form */
-*,
+/* *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
   font-size: 62,5%;
-}
+} */
 
 body {
   height: 100vh;
 	width: 100%;
-  background: #0f2027; /* fallback for old browsers */
-  background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+  background: rgb(166,33,3);
+  background: radial-gradient(circle, rgba(166,33,3,1) 39%, rgba(250,91,55,1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +43,7 @@ body {
 }
 
 .form__label {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   margin-left: 2rem;
   margin-top: 0.7rem;
@@ -38,7 +53,7 @@ body {
 }
 
 .form__input {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #333;
   font-size: 1.2rem;
 	margin: 0 auto;
@@ -46,7 +61,7 @@ body {
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
   border: none;
-  width: 90%;
+  width: 20%;
   display: block;
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
@@ -59,7 +74,6 @@ body {
   transform: translateY(-4rem);
 }
 
-}
 
 
 
