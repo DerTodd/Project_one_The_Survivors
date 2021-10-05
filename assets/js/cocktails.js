@@ -33,6 +33,7 @@ function getCocktail() {
         var drinkChoice = {
             name : data.drinks[0].strDrink,
             instructions : data.drinks[0].strInstructions,
+            image : data.drinks[0].strDrinkThumb,
             ingredient1 : data.drinks[0].strIngredient1,
             measurement1 : data.drinks[0].strMeasure1,
             ingredient2 : data.drinks[0].strIngredient2,
@@ -126,8 +127,15 @@ function getCocktail() {
         console.log(drinkChoice.ingredient2);
         console.log(drinkChoice.ingredient3);
         console.log(drinkChoice.ingredient4);
+        console.log(drinkChoice.image);
         document.getElementById("drinkName").textContent = drinkChoice.name;
         document.getElementById("instructions").textContent = "Instructions: " + drinkChoice.instructions;
+        var img = document.createElement('img');
+            img.src = drinkChoice.image;
+            img.alt = "Picture of cocktail";
+            img.width = 250;
+            img.height = 250;
+            document.getElementById('image1').appendChild(img);   
         //document.getElementById("ingredient1").textContent = "First Ingredient: " + drinkChoice.measurement1 + " " + drinkChoice.ingredient1;
         // document.getElementById("ingredient2").textContent = "Second Ingredient: " + drinkChoice.measurement2 + " " + drinkChoice.ingredient2;
         // document.getElementById("ingredient3").textContent = "Third Ingredient: " + drinkChoice.measurement3 + " " + drinkChoice.ingredient3;
@@ -168,6 +176,7 @@ findIt.addEventListener('click', function(event) {
     //alert("Hi, " + event.target.tagName);
     clearDiv("ingredUL");
     clearDiv("measUL");
+    clearDiv("image1");
     getCocktail();
 });
 //inspired by https://www.geeksforgeeks.org/how-to-clear-the-content-of-a-div-using-javascript/
