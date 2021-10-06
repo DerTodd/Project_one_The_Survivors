@@ -1,7 +1,4 @@
-:root {
-  --textColor: black;
 
-}
 
 .heroImage {
   display: flex;
@@ -10,6 +7,9 @@
   height: 100%;
 }
 
+.button is-primary {
+  color: #732720;
+}
 
 
 /* Banner Image */
@@ -107,11 +107,7 @@
 } */
 
 /* Responsive Styling */
-@media screen and (min-width: 769px), print {
-.heroImage {
-    padding: 9rem 1.5rem;
-}
-}
+
 
 
 @media screen and (max-width: 1099px) {
