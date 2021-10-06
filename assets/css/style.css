@@ -1,3 +1,15 @@
+body {
+  background-color: #F2E8DC;
+}
+
+h1 {
+  font-color: #732720;
+}
+
+.column-is-7-post-img {
+  border-radius: 10px;
+}
+
 .heroImage {
   display: flex;
   justify-content: center;
@@ -5,6 +17,9 @@
   height: 100%;
 }
 
+.button is-primary {
+  color: #732720;
+}
 
 
 /* Banner Image */
@@ -101,11 +116,7 @@
 } */
 
 /* Responsive Styling */
-@media screen and (min-width: 769px), print {
-.heroImage {
-    padding: 9rem 1.5rem;
-}
-}
+
 
 
 @media screen and (max-width: 1099px) {
