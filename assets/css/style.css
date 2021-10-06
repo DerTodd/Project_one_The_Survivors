@@ -1,1 +1,22 @@
 
+.hero-body {
+    background: url(../images/Banner1.jpg);
+    background-size: cover;
+    margin-bottom: 70px;
+    height: 20vh;
+}
+
+.button {
+    background-color: #D92929;
+    color: white;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    color: #D92929;
+}
+
+.post {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
