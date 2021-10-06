@@ -1,3 +1,8 @@
+:root {
+  --textColor: black;
+
+}
+
 /* Banner Image */
 .bannerImage {
   display: flex;
@@ -17,6 +22,7 @@
   font-family: "Montserrat", sans-serif;
   padding: 30px;
   margin-bottom: 60px;
+  color: var(--textColor);
 }
 
 
@@ -56,7 +62,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #fff;
+  color: (--textColor);
 }
 
 .form__label {

@@ -1,7 +1,8 @@
 let search; 
 let recipesArray = [];
-const recipeEl = $("#recipe");
+//const recipeEl = $("#recipe");
 var searchHistory = [];
+var starvingButton = document.getElementById("#starving");
 
 // get history function instead of const. b/c it wont be called again 
 function getItem() {
@@ -24,7 +25,7 @@ function getItem() {
 };
 
 var recipe
-var recipeContainer = $("#search-results-container1");
+//var recipeContainer = $("#search-results-container1");
 getItem();
 
 function getData() {
