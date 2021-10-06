@@ -1,14 +1,4 @@
-body {
-  background-color: #F2E8DC;
-}
 
-h1 {
-  font-color: #732720;
-}
-
-.column-is-7-post-img {
-  border-radius: 10px;
-}
 
 .heroImage {
   display: flex;
@@ -41,6 +31,7 @@ h1 {
   font-family: "Montserrat", sans-serif;
   padding: 30px;
   margin-bottom: 60px;
+  color: var(--textColor);
 }
 
 
@@ -80,7 +71,7 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #fff;
+  color: (--textColor);
 }
 
 .form__label {
