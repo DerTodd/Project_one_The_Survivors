@@ -3,19 +3,28 @@
 
 }
 
+.heroImage {
+  display: flex;
+  justify-content: center;
+  width:100%;
+  height: 100%;
+}
+
+
+
 /* Banner Image */
-.bannerImage {
+/* .bannerImage {
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  width: 100%;
-}
+  width: 100%; */
+/* } */
 
 /* h1 */
-.h1 {
+/* .h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +41,7 @@
   text-align: center;
   padding-bottom: 25px;
   height: 500vh;
-}
+} */
 
 /* Sizing of Banner Image */
 
@@ -49,7 +58,7 @@
   font-size: 62,5%;
 } */
 
-body {
+/* body {
   height: 100vh;
   width: 100%;
   background: rgb(166, 33, 3);
@@ -95,9 +104,15 @@ body {
   visibility: hidden;
   -webkit-transform: translateY(-4rem);
   transform: translateY(-4rem);
-}
+} */
 
 /* Responsive Styling */
+@media screen and (min-width: 769px), print {
+.heroImage {
+    padding: 9rem 1.5rem;
+}
+}
+
 
 @media screen and (max-width: 1099px) {
   header {
