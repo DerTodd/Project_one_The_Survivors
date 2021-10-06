@@ -1,10 +1,4 @@
-body {
-  background-color: #F2E8DC;
-}
 
-h1 {
-color: #732720;
-}
 
 .heroImage {
   display: flex;
@@ -37,6 +31,7 @@ color: #732720;
   font-family: "Montserrat", sans-serif;
   padding: 30px;
   margin-bottom: 60px;
+  color: var(--textColor);
 }
 
 
@@ -76,7 +71,7 @@ color: #732720;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #fff;
+  color: (--textColor);
 }
 
 .form__label {
