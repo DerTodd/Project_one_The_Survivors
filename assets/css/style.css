@@ -68,3 +68,43 @@
     display: block;
     margin-top: 20px;
 }
+
+#List {
+    position: relative; left: 20px;
+    display: block;
+    text-align: center;
+    margin-left: 50px;
+}
+
+#mealChoice {
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+img {
+    position: absolu;
+    text-align: center;
+    margin-top: 40px;
+    display: center;
+}
+
+
+.column ul ul {
+    position: relative;
+    text-align: center;
+    margin-left: 40px;
+}
+
+ul ul {
+    display: center;
+}
+
+.bolded {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.recipe {
+    margin-top: 150px;
+}
