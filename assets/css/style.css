@@ -2,7 +2,7 @@
 .hero-body {
     background: url(../images/Banner1.jpg);
     background-size: cover;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
     height: 20vh;
 }
 
@@ -19,4 +19,33 @@
 .post {
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
+}
+
+.instructions {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 90px;
+}
+
+.navbar {
+    display: inline;
+    padding: 2px;
+}
+
+.footer {
+    /* position: fixed; */
+    position: relative;
+    margin-top: 100px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #D92929;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
 }
