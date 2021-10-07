@@ -132,7 +132,7 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${recipeSelected}&app
 };
 //Kick this thing off!
 foodnowButton.addEventListener('click', function(event) {
-    alert("Click OK To Get Your Recipes! " + event.target.tagName);
+    // alert("Click OK To Get Your Recipes! " + event.target.tagName);
     //clearDiv("ingredUL");
     //clearDiv("measUL");
     clearUl("mealChoice");
