@@ -2,11 +2,6 @@ var foodnowButton = document.getElementById("starving");
 var recipe = document.getElementById("name");
 var api = "49f3da27c23f6a2b713252c89ab419d6";
 var applicationId = "0ab5a438";
-
-
-
-
-
 function getItem() {
     var storedRecipe = JSON.parse(localStorage.getItem("search-history"));
     if (storedRecipe !== null) {
@@ -25,8 +20,6 @@ function getItem() {
     (".list-group").append(getrecipeBtn)
     }
 };
-
-
 function getFoodChoice() {
     recipeTrim = recipe.value.trim();
     recipeNoSpace= recipeTrim.split(' ').join('_');
@@ -49,7 +42,7 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${recipeSelected}&app
     return response.json();
     })
 // .catch(err => {
-// 	console.error(err);
+//  console.error(err);
 // });
 .then(function (data) {
     console.log(data)
@@ -139,7 +132,7 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${recipeSelected}&app
 };
 //Kick this thing off!
 foodnowButton.addEventListener('click', function(event) {
-    alert("Hi, I'm a submit button! " + event.target.tagName);
+    alert("Click OK To Get Your Recipes! " + event.target.tagName);
     //clearDiv("ingredUL");
     //clearDiv("measUL");
     clearUl("mealChoice");
