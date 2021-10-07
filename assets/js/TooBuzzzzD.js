@@ -10,11 +10,13 @@ function tooBuzzD() {
     console.log(oldDrinksO)
     var old_list =data[0].drink;
     console.log(old_list);
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < oldDrinksO.length ; index++) {
+        if(data[index].drink !== undefined && data[index].drink !== "") {
         var old_search = data[index].drink;
         oldDrinks.push(old_search);
+        console.log(old_search);
         console.log(oldDrinks);
-        
+    }
     };
     console.log(oldDrinks);
     for (let i = 0; i < oldDrinks.length; i++) {
@@ -29,7 +31,7 @@ function tooBuzzD() {
             document.getElementById('hitMeAgain').appendChild(drinkBtn); 
             console.log(newId);
             document.getElementById(newId).addEventListener("click", function(event) {
-            alert("Hi, I'm a submit button! " + event.target.tagName);
+            // alert("Hi, I'm a submit button! " + event.target.tagName);
             makeDrinks(this)
             
             });
@@ -38,7 +40,7 @@ function tooBuzzD() {
 
 };
 function makeDrinks(el) {
-    alert (el.textContent);
+    // alert (el.textContent);
     var drinkaLittleDrink = el.textContent;
     console.log(drinkaLittleDrink)
     anotherRound(drinkaLittleDrink);
