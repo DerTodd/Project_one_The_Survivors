@@ -1,4 +1,3 @@
-
 .hero-body {
     background: url(../images/BannerUpdate2.png);
     background-size: cover;
@@ -31,11 +30,61 @@
     margin-bottom: 90px;
 }
 
-.navbar {
-    display: inline;
-    padding: 2px;
+/* Navbar */
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: black;
+}
+
+.nav-link:hover{
+    color: #D92929;
+}
+
+
+/* .navbar {
+    display: inline;
+    padding: 2px;
+} */
+
+
+/* Footer */
 .footer {
     /* position: fixed; */
     position: relative;
@@ -108,3 +157,67 @@ ul ul {
 .recipe {
     margin-top: 150px;
 }
+.content {
+    display: block;
+}
+
+.food {
+    display: block;
+    margin-top: 90px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* img {
+    /* margin-left:20%;  */
+    /* display: block;
+    margin-left: 450px;
+    border-radius: 5px;
+
+    } */
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.hamburger {
+    display: none;
+}
+
+    
+@media only screen and (max-width: 768px) {
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px black
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
+
+

@@ -138,13 +138,14 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkSelected}
     console.log(drinkChoice.ingredient3);
     console.log(drinkChoice.ingredient4);
     console.log(drinkChoice.image);
-    document.getElementById("drinkName").textContent = drinkChoice.name;
-    document.getElementById("instructions").textContent = "Instructions: " + drinkChoice.instructions;
     clearDiv("ingredUL");
     clearDiv("measUL");
     clearDiv("image1");
     clearDiv("instructions");
     clearDiv("drinkName");
+    document.getElementById("drinkName").textContent = drinkChoice.name;
+    document.getElementById("instructions").textContent = "Instructions: " + drinkChoice.instructions;
+    
     var img = document.createElement('img');
         img.src = drinkChoice.image;
         img.alt = "Picture of cocktail";
@@ -158,7 +159,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkSelected}
         //var iList =
         //document.getElementById("ingredUL").appendChild(ident).textContent = "Ingredient: " + ingred + " "
         var iList = document.createElement('li');
-        iList.textContent = ingred;
+        iList.textContent = ingred.replace(/null/g, "");
         document.getElementById('ingredUL').appendChild(iList); 
         };
     };
@@ -189,8 +190,6 @@ function tooFull() {
         console.log(oldFood);
     };
 };
-        
-    };
     console.log(oldFood);
     for (let i = 0; i < oldFood.length; i++) {
         var newButtonsFood = oldFood[i];
@@ -210,6 +209,8 @@ function tooFull() {
             });
     };
 
+
+};
 function makeFood(el) {
     alert (el.textContent);
     var eataLittleEat = el.textContent;
