@@ -152,9 +152,9 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkSelected}
         img.height = 250;
         document.getElementById('image1').appendChild(img);   
     for (let index = 0; index < 15; index++) {
-        const ingred = ingredList[index];
+        const ingred = combinedList[index];
         //const ident = identList[index];
-        if(ingred !== null){
+        if(ingred !== null && ingred !== "null: null"){
         //var iList =
         //document.getElementById("ingredUL").appendChild(ident).textContent = "Ingredient: " + ingred + " "
         var iList = document.createElement('li');
@@ -163,28 +163,32 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkSelected}
         };
     };
 
-    for (let index = 0; index < 15; index++) {
-        const measu = measurements[index];
-        //const identm = measList[index];
-        if(measu !== null){
-        //document.getElementById("ingredUL").appendChild(identm).textContent = "Measurment: " + measu + " ";
-        var mlist = document.createElement('li');
-        mlist.textContent = measu;
-        document.getElementById('measUL').appendChild(mlist)
-        };
-    };
+    // for (let index = 0; index < 15; index++) {
+    //     const measu = measurements[index];
+    //     //const identm = measList[index];
+    //     if(measu !== null){
+    //     //document.getElementById("ingredUL").appendChild(identm).textContent = "Measurment: " + measu + " ";
+    //     var mlist = document.createElement('li');
+    //     mlist.textContent = measu;
+    //     document.getElementById('measUL').appendChild(mlist)
+    //     };
+    // };
 });
 };
 
 function tooFull() {
     data = JSON.parse(localStorage.getItem("data")) || [];
     console.log(data);
-    var old_food_list =data[0].recipe;
+    var old_food_list =data;
     console.log(old_food_list);
-    for (let index = 0; index < 50; index++) {
-        var old_search = data[index].drink;
-        oldFood.push(old_search);
+    for (let index = 0; index < old_food_list.length; index++) {
+        if(data[index].recipe !== undefined && data[index].recipe !== "") {
+        var old_search_Food = data[index].recipe;
+        oldFood.push(old_search_Food);
+        console.log(old_search_Food);
         console.log(oldFood);
+    };
+};
         
     };
     console.log(oldFood);
@@ -206,8 +210,6 @@ function tooFull() {
             });
     };
 
-
-};
 function makeFood(el) {
     alert (el.textContent);
     var eataLittleEat = el.textContent;
@@ -291,7 +293,7 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${foodSelected}&app_i
                 document.getElementById('oldFoodChoice').appendChild(imga);
             var imgulF = document.createElement('ul');
                 imgulF.id = "List" + index;
-                document.getElementById('oldFoodChoice').appendChild(imgul);
+                document.getElementById('oldFoodChoice').appendChild(imgulF);
                 //document.getElementById("oldFoodChoice").href = data.hits[index].recipe.url;
                 for (let i = 0; i < 15; i++) {
                     const ingredFood = foodArray[i];
