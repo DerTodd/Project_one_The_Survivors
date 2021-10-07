@@ -85,6 +85,8 @@ h3 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    padding: 2px;
+    justify-content: center;
 }
 
 .hamburger {
@@ -98,6 +100,7 @@ h3 {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    background-color: black;
 }
 
 .nav-menu {
@@ -121,19 +124,10 @@ h2 {
 
 }
 
-.hamburger {
-    display: none;
+
+.nav-link:hover{
+    color: #D92929;
 }
-
-/* .nav-link:hover{
-    color: #D92929; */
-
-
-
-/* .navbar {
-    display: inline;
-    padding: 2px;
-} */
 
 
 /* Footer */
