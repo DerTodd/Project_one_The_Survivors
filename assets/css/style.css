@@ -1,9 +1,53 @@
-.hero-body {
+/* .hero-body {
     background: url(../images/BannerUpdate2.png);
     background-size: cover;
     margin-bottom: 90px;
     height: 20vh;
+} */
+
+/* Banner */
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
 }
+
+.image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    margin-bottom: 90px;
+    background-repeat: no-repeat;
+}
+
+/* .image2 {
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+} */
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 150px;
+    font-weight: 900;
+    position: absolute;
+    top: 20px;
+    width: 100vw;
+    margin-top: 5vw;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 3px 3px 10px black;
+    
+}
+
+/* body */
 
 .button {
     background-color: #D92929;
@@ -54,7 +98,6 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: black;
 }
 
 .nav-menu {
@@ -68,14 +111,23 @@
 }
 
 .nav-link{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: black;
 }
 
-.nav-link:hover{
-    color: #D92929;
+h2 {
+    font-family: 'Montserrat', sans-serif;
+
 }
+
+.hamburger {
+    display: none;
+}
+
+/* .nav-link:hover{
+    color: #D92929; */
+
 
 
 /* .navbar {
@@ -140,15 +192,6 @@
 
     } */
 
-h2 {
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-.hamburger {
-    display: none;
-}
-
     
 @media only screen and (max-width: 768px) {
 
@@ -179,6 +222,9 @@ h2 {
         cursor: pointer;
     }
 
+    h3 {
+        font-size: 13vw;
+    }
 }
 
 

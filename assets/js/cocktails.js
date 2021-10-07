@@ -119,7 +119,23 @@ function getCocktail() {
             data.drinks[0].strMeasure14,
             data.drinks[0].strMeasure15
         ] 
-        //
+        var combinedList= [
+            data.drinks[0].strIngredient1 + ": " + data.drinks[0].strMeasure1,
+            data.drinks[0].strIngredient2 + ": " + data.drinks[0].strMeasure2,
+            data.drinks[0].strIngredient3 + ": " + data.drinks[0].strMeasure3,
+            data.drinks[0].strIngredient4 + ": " + data.drinks[0].strMeasure4,
+            data.drinks[0].strIngredient5 + ": " + data.drinks[0].strMeasure5,
+            data.drinks[0].strIngredient6 + ": " + data.drinks[0].strMeasure6,
+            data.drinks[0].strIngredient7 + ": " + data.drinks[0].strMeasure7,
+            data.drinks[0].strIngredient8 + ": " + data.drinks[0].strMeasure8,
+            data.drinks[0].strIngredient9 + ": " + data.drinks[0].strMeasure9,
+            data.drinks[0].strIngredient10 + ": " + data.drinks[0].strMeasure10,
+            data.drinks[0].strIngredient11 + ": " + data.drinks[0].strMeasure11,
+            data.drinks[0].strIngredient12 + ": " + data.drinks[0].strMeasure12,
+            data.drinks[0].strIngredient13 + ": " + data.drinks[0].strMeasure13,
+            data.drinks[0].strIngredient14 + ": " + data.drinks[0].strMeasure14,
+            data.drinks[0].strIngredient15 + ": " + data.drinks[0].strMeasure15
+        ]
 
         console.log(ingredList);
         console.log(measurements);
@@ -143,11 +159,9 @@ function getCocktail() {
         // document.getElementById("ingredient5").textContent = "Fifth Ingredient: " + drinkChoice.measurement5 + " " + drinkChoice.ingredient5;
         // document.getElementById("ingredient6").textContent = "Sixth Ingredient: " + drinkChoice.measurement6 + " " + drinkChoice.ingredient6;
         for (let index = 0; index < 15; index++) {
-            const ingred = ingredList[index];
+            const ingred = combinedList[index];
             //const ident = identList[index];
-            if(ingred !== null){
-            //var iList =
-            //document.getElementById("ingredUL").appendChild(ident).textContent = "Ingredient: " + ingred + " "
+            if(ingred !== null && ingred !== "null: null"){
             var iList = document.createElement('li');
             iList.textContent = ingred;
           document.getElementById('ingredUL').appendChild(iList); 
