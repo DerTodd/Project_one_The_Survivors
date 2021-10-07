@@ -1,6 +1,6 @@
 
 .hero-body {
-    background: url(../images/Banner1.jpg);
+    background: url(../images/BannerUpdate2.png);
     background-size: cover;
     margin-bottom: 90px;
     height: 20vh;
@@ -48,4 +48,14 @@
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
+}
+
+.input {
+    width: 25%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+
 }
