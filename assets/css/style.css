@@ -170,6 +170,7 @@ h2 {
 
 }
 
+
 /* food page */
 
 .recipe {
@@ -265,6 +266,15 @@ h2 {
     }
 
     .button {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .findIt {
         margin-left: 5px;
         margin-right: 5px;
         margin-bottom: 50px;
