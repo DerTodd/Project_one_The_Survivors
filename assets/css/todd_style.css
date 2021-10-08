@@ -17,3 +17,17 @@ a {
     text-align: center;
     margin: 0 3em 0 3em;
 }
+#drinks {
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
+    margin: 0 3em 0 3em;
+    list-style: none;  
+}
+#drinks ul li {
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
+    margin: 0 3em 0 3em;
+    list-style: none;  
+}
