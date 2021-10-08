@@ -36,12 +36,14 @@ function tooBuzzD() {
             drinkBtn.textContent = newButtonsDrinks;
             drinkBtn.type = "submit";
             drinkBtn.id = "drinkbutton" + i;
-            drinkBtn.style.backgroundColor = "#71DFBE"
+            drinkBtn.style.backgroundColor = "#D92929"
             drinkBtn.style.color ="White"
             drinkBtn.style.borderRadius = "12px"
             drinkBtn.style.padding ="20px"
-            drinkBtn.style.font= "bold 1.25rem/1 poppins";
-            drinkBtn.style.color= "#2B2D2F";
+            drinkBtn.style.margin =".5em"
+            drinkBtn.style.border ="none"
+            drinkBtn.style.font= "bold 1.25rem/1 montserrat";
+            drinkBtn.style.color= "white";
             document.getElementById('hitMeAgain').appendChild(drinkBtn); 
             console.log(newId);
             document.getElementById(newId).addEventListener("click", function(event) {
@@ -220,12 +222,14 @@ function tooFull() {
             foodBtn.textContent = newButtonsFood;
             foodBtn.type = "submit";
             foodBtn.id = "foodbutton" + i;
-            foodBtn.style.backgroundColor = "#2B2D2F"
+            foodBtn.style.backgroundColor = "#D92929"
             foodBtn.style.color ="White"
+            foodBtn.style.border ="none"
             foodBtn.style.borderRadius = "12px"
             foodBtn.style.padding ="20px"
-            foodBtn.style.font= "bold 1.25rem/1 poppins";
-            foodBtn.style.color= "#71DFBE";
+            foodBtn.style.margin =".5em"
+            foodBtn.style.font= "bold 1.25rem/1 montserrat";
+            foodBtn.style.color= "white";
             document.getElementById('feedMe').appendChild(foodBtn); 
             console.log(newIdF);
             document.getElementById(newIdF).addEventListener("click", function(event) {
