@@ -42,8 +42,7 @@ Then I am presented again with recipe for that dish or cocktail
 
 
 # Other Details
-
-- See Power Point
+[Link to FoodBuzz](https://dertodd.github.io/Project_one_The_Survivors/)
 
 
 
