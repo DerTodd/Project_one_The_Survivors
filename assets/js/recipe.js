@@ -117,7 +117,7 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${recipeSelected}&app
             <div class= "columns">
         <div class= "column is-half">
             <p class="bolded">   ${data.hits[index].recipe.label} </p> <br/>
-        <a href = ${data.hits[index].recipe.url}> <img src=${foodO.image} alt=${foodO.nameFood}/> </a>
+        <a href = ${data.hits[index].recipe.url}> <img class ="picture" src=${foodO.image} alt=${foodO.nameFood}/> </a>
         </div>
         <div class="column is-half recipe" id=${index}> 
         
