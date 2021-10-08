@@ -67,6 +67,24 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${recipeSelected}&app
             ingredient12 : data.hits[0].recipe.ingredientLines[11],
             ingredient13 : data.hits[0].recipe.ingredientLines[12]
         };
+        // function renderIngredients(foodArray, index) {
+        //     var ul = document.createElement("ul")
+        //     var item = document.getElementById(index)
+        //     for (let i = 0; i < foodArray.length; i++) {
+        //         const ingredFood = foodArray[i];
+        //         //const ident = identList[index];
+        //         if(ingredFood !== null && ingredFood !== "" && ingredFood !== undefined){
+        //             ul.innerHTML+=`<li>${ingredFood}</li>`
+        //         //var iList =
+        //         //document.getElementById("ingredUL").appendChild(ident).textContent = "Ingredient: " + ingred + " "
+        //         // var iFoodList = document.createElement('li');
+        //         // iFoodList.textContent = ingredFood;
+        //         // document.getElementById(imgul.id).appendChild(iFoodList); 
+        //         };
+        //     };
+        //     item.appendChild(ul)
+        // }
+
         console.log(foodChoice);
         for (let index = 0; index < 5; index++) {
             //var topFoodChoice = foods[index];
@@ -93,36 +111,67 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${recipeSelected}&app
             console.log(foods);
             foodArray = [foodO.ingredient1, foodO.ingredient2, foodO.ingredient3, foodO.ingredient4, foodO.ingredient5, foodO.ingredient6, foodO.ingredient7, foodO.ingredient8, foodO.ingredient9, foodO.ingredient10, foodO.ingredient11, foodO.ingredient12, foodO.ingredient13,]
             console.log(foodArray);
-            var imgh2 = document.createElement('h2');
-                imgh2.textContent = data.hits[index].recipe.label;
-                document.getElementById('mealChoice').appendChild(imgh2); 
+            // console.log(renderIngredients(foodArray))
+            var container = document.getElementById("results");
+            container.innerHTML+=`
+            <div class= "columns">
+        <div class= "column is-half">
+            <p class="bolded">   ${data.hits[index].recipe.label} </p> <br/>
+        <a href = ${data.hits[index].recipe.url}> <img class ="picture" src=${foodO.image} alt=${foodO.nameFood}/> </a>
+        </div>
+        <div class="column is-half recipe" id=${index}> 
+        
+                
+        </div>
+        
             
-            var img = document.createElement('img');
-                img.id = "Image" + index
-                img.src = foodO.image;
-                img.alt = foodO.nameFood;
-                img.width = 200;
-                img.height = 200;
-                document.getElementById('mealChoice').appendChild(img); 
-            var imga = document.createElement('a');
-                imga.textContent = data.hits[index].recipe.label;
-                imga.href = data.hits[index].recipe.url;
-                document.getElementById('mealChoice').appendChild(imga);
-            var imgul = document.createElement('ul');
-                imgul.id = "List" + index;
-                document.getElementById('mealChoice').appendChild(imgul);
-                //document.getElementById("mealChoice").href = data.hits[index].recipe.url;
-                for (let i = 0; i < 15; i++) {
-                    const ingredFood = foodArray[i];
-                    //const ident = identList[index];
-                    if(ingredFood !== null && ingredFood !== "" && ingredFood !== undefined){
-                    //var iList =
-                    //document.getElementById("ingredUL").appendChild(ident).textContent = "Ingredient: " + ingred + " "
-                    var iFoodList = document.createElement('li');
-                    iFoodList.textContent = ingredFood;
-                    document.getElementById(imgul.id).appendChild(iFoodList); 
-                    };
-                };
+            `
+            foodArray.forEach(ingredFood => {
+                if(ingredFood !== null && ingredFood !== "" && ingredFood !== undefined){
+                    console.log(ingredFood)
+                    var ingredList = `${ingredFood}
+                    `
+                    var ingredItem = document.getElementById(index)
+                    var space = document.createElement("br")
+                    ingredItem.append(ingredList)
+                    ingredItem.append(space)
+                    
+                    
+                }})
+        // renderIngredients(foodArray, index)
+            
+
+
+            // var imgh2 = document.createElement('h2');
+            //     imgh2.textContent = data.hits[index].recipe.label;
+            //     document.getElementById('mealChoice').appendChild(imgh2); 
+            
+            // var img = document.createElement('img');
+            //     img.id = "Image" + index
+            //     img.src = foodO.image;
+            //     img.alt = foodO.nameFood;
+            //     img.width = 200;
+            //     img.height = 200;
+            //     document.getElementById('mealChoice').appendChild(img); 
+            // var imga = document.createElement('a');
+            //     imga.textContent = data.hits[index].recipe.label;
+            //     imga.href = data.hits[index].recipe.url;
+            //     document.getElementById('mealChoice').appendChild(imga);
+            // var imgul = document.createElement('ul');
+            //     imgul.id = "List" + index;
+            //     document.getElementById('mealChoice').appendChild(imgul);
+            //     //document.getElementById("mealChoice").href = data.hits[index].recipe.url;
+                // for (let i = 0; i < 15; i++) {
+                //     const ingredFood = foodArray[i];
+                //     //const ident = identList[index];
+                //     if(ingredFood !== null && ingredFood !== "" && ingredFood !== undefined){
+                //     //var iList =
+                //     //document.getElementById("ingredUL").appendChild(ident).textContent = "Ingredient: " + ingred + " "
+                //     var iFoodList = document.createElement('li');
+                //     iFoodList.textContent = ingredFood;
+                //     document.getElementById(imgul.id).appendChild(iFoodList); 
+                //     };
+                // };
             
             }return foods;
             //console.log(foods); 
@@ -135,13 +184,13 @@ foodnowButton.addEventListener('click', function(event) {
     // alert("Click OK To Get Your Recipes! " + event.target.tagName);
     //clearDiv("ingredUL");
     //clearDiv("measUL");
-    clearUl("mealChoice");
+    // clearUl("mealChoice");
     getFoodChoice();
 });
-function clearUl(elementID) {
-    var ul = document.getElementById(elementID);
+// function clearUl(elementID) {
+//     var ul = document.getElementById(elementID);
     
-    while(ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-    }
-}
+//     while(ul.firstChild) {
+//         ul.removeChild(ul.firstChild);
+//     }
+// }

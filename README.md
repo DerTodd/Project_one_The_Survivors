@@ -37,6 +37,10 @@ Then I am presented again with recipe for that dish or cocktail
 
 [Food Recipe API](https://api.edamam.com/api/recipes/v2)
 
+# Screenshot
+![Screenshot](./assets/images/FoodBuzzHomepage.png)
+
+
 # Other Details
 
 - See Power Point
