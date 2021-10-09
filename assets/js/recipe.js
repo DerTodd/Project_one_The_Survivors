@@ -184,14 +184,14 @@ foodnowButton.addEventListener('click', function(event) {
     // alert("Click OK To Get Your Recipes! " + event.target.tagName);
     //clearDiv("ingredUL");
     //clearDiv("measUL");
-    // clearUl("mealChoice");
+    clearUl("results");
     getFoodChoice();
 });
-// function clearUl(elementID) {
-//     var ul = document.getElementById(elementID);
+function clearUl(elementID) {
+    var ul = document.getElementById(elementID);
     
-//     while(ul.firstChild) {
-//         ul.removeChild(ul.firstChild);
-//     }
-// }
+    while(ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
+}
 
