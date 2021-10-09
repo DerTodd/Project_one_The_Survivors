@@ -31,9 +31,11 @@ function getCocktail() {
         console.log(data)
         //console.log("drink check " + data.drinks[0].strDrink)
         if(data.drinks == "undefined" || data.drinks == null || data.drinks == "" || data.drinks == "drinks: null") {
+            document.getElementById("drinkName").textContent = "";
+            document.getElementById("instructions").textContent = "";
             var rejected = document.createElement('p');
             rejected.textContent = "We've all been rejected.  Take a bite of lime, shake it off, and try again!";
-            rejected.style.color = "Red"
+            rejected.style.color = "Red";
             document.getElementById('ingredUL').appendChild(rejected); 
         }else {
         var drinkChoice = {
