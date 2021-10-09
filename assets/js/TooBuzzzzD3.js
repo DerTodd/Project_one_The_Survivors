@@ -26,7 +26,7 @@ function tooBuzzD() {
         unique_drinks.push(c);
         }
     });
-  console.log(unique_drinks);
+    console.log(unique_drinks);
     for (let i = 0; i < unique_drinks.length; i++) {
         var newButtonsDrinks = unique_drinks[i];
         if(newButtonsDrinks !== null && newButtonsDrinks !== "" && newButtonsDrinks !== undefined)
